@@ -90,10 +90,10 @@ const Signup = () => {
     const showSignupForm = () => (
         <form className='signup-form' onSubmit={handleSubmit} noValidate>
             {/* username */}
-            <div className=' form-group input-group '>
+            <div className=' form-group input-group mb-2 '>
                 <div className='input-group-prepend'>
                     <span className='input-group-text'>
-                        <i className='fa fa-user'></i>
+                        <i className='fa fa-user mt-2'></i>
                     </span>
                 </div>
                 <input
@@ -106,10 +106,10 @@ const Signup = () => {
                 />
             </div>
             {/* email */}
-            <div className=' form-group input-group '>
+            <div className=' form-group input-group mb-2'>
                 <div className='input-group-prepend'>
                     <span className='input-group-text'>
-                        <i className='fa fa-envelope'></i>
+                        <i className='fa fa-envelope mt-2'></i>
                     </span>
                 </div>
                 <input
@@ -122,10 +122,10 @@ const Signup = () => {
                 />
             </div>
             {/* pass */}
-            <div className=' form-group input-group '>
+            <div className=' form-group input-group mb-2 '>
                 <div className='input-group-prepend'>
                     <span className='input-group-text'>
-                        <i className='fa fa-lock'></i>
+                        <i className='fa fa-lock mt-2'></i>
                     </span>
                 </div>
                 <input
@@ -138,10 +138,10 @@ const Signup = () => {
                 />
             </div>
             {/* pass2 */}
-            <div className=' form-group input-group '>
+            <div className=' form-group input-group mb-2'>
                 <div className='input-group-prepend'>
                     <span className='input-group-text'>
-                        <i className='fa fa-lock'></i>
+                        <i className='fa fa-lock mt-2'></i>
                     </span>
                 </div>
                 <input
@@ -156,12 +156,12 @@ const Signup = () => {
             {/* signup button */}
             <div className='form-group'>
                 <button type='submit' className='btn btn-primary btn-block'>
-                    Signup
+                    Бүртгүүлэх
                 </button>
 
             </div>
             <p className='text-center tex-white'>
-                Have an account ?  <Link to='/signin'> Log in</Link>
+               <h3 className="border rounded-3 border-success border-3 text-primary"> Бүртгүүлтэй юу ?</h3>  <Link to='/signin'><h5 className="btn rounded-pill btn-danger">Нэвтрэх</h5> </Link>
             </p>
 
         </form>

@@ -1,21 +1,26 @@
-import { LogOutput } from "concurrently";
+
 import React, { Fragment } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { isAuthenticated, logout } from "../helper/auth";
+import { useSelector } from "react-redux";
 
 
-const Header = ({navigate}) => {
+const Header = () => {
+    let navigate = useNavigate();
+
+    const { cart } = useSelector(state => state.cart);
    
     const handleLogout = (evt) => {
         logout(() =>{
-            navigate('/signin')
+            navigate('/signin', {replace: true})
 
         })
     };
     const showNavigation = () => (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
-                <Link to='/' className="navbar-brand">Logo</Link>
+                <Link to='/' className="navbar-brand">
+                   <i className="fab fa-cuttlefish"></i> Logo</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -26,17 +31,28 @@ const Header = ({navigate}) => {
 
                                 <li className="nav-item">
                                     <Link to='/' className="nav-link">
-                                        Home
+                                       <i className="fas fa-home"> </i> Home
+                                    </Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to='/shop' className="nav-link">
+                                       <i className="fas fa-shopping-bag"> </i> Shop
+                                    </Link>
+                                </li>
+                                <li className="nav-item mx-2 ">
+                                    <Link to='/cart' className="nav-link" style={{ position: 'relative'}}>
+                                       <i className="fas fa-shopping-cart"> </i> Cart
+                                       <span className=" mt-1 mx-1 translate-middle badge rounded-pill bg-danger" style={{ position: 'absolute', top: '0px'}}> {cart.length} </span>
                                     </Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link to='/signup' className="nav-link">
-                                        Signup
+                                       <i className="fas fa-edit"></i> Signup
                                     </Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link to='/signin' className="nav-link">
-                                        Signin
+                                      <i className="fas fa-user-edit"></i> Signin
                                     </Link>
                                 </li>
                             </Fragment>
@@ -68,9 +84,9 @@ const Header = ({navigate}) => {
                             <Fragment>
 
                                 <li className="nav-item">
-                                    <button 
+                                    <button
                                     
-                                    className="nav-link"
+                                    className="btn btn-link"
                                     onClick={handleLogout}
                                       
                                     

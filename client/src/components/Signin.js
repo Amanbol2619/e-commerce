@@ -61,23 +61,26 @@ const handleSubmit = (evt) =>{
      setFormData({...formData, loading:true});
 
      signin(data)
-      .then( (response) =>{
-          setAuthentication(response.data.token, response.data.user);
-        
-        if( isAuthenticated().role && isAuthenticated().role === 1 ) {
-                   
-            console.log('admin ruugaa');
-            navigate('/admin/dashboard', {replace: true});
-        } else{
-            console.log('redirecting to user Dashboard');
-            navigate('/user/dashboard', {replace: true});
+     .then(response =>{
+         setAuthentication(response.data.token, response.data.user);
+         
+          if(isAuthenticated() && isAuthenticated().role === 1){
+         console.log('admin ruuga');
+         navigate('/admin/dashboard');
+         
+          } else{
+              console.log('nnnnn');
+              navigate('/user/dashboard');
+          }
 
-        }
-
-
-      })
+     })
       .catch( err =>{
         console.log('signin api function err :', err);
+        setFormData({
+            ...formData,
+            loading:false,
+            errorMsg: err.response.data.errorMessage,
+        });
       });
 }
     
@@ -90,10 +93,10 @@ const handleSubmit = (evt) =>{
  const showSigninForm = () =>(
   <form className='signin-form' onSubmit={handleSubmit} noValidate>
      {/* email */}
-     <div className=' form-group input-group '>
+     <div className=' form-group input-group mb-2 '>
                 <div className='input-group-prepend'>
                     <span className='input-group-text'>
-                        <i className='fa fa-envelope'></i>
+                    <i className="fa-solid fa-envelope mt-2"></i>
                     </span>
                 </div>
                 <input
@@ -106,10 +109,10 @@ const handleSubmit = (evt) =>{
                 />
             </div>
             {/* pass */}
-            <div className=' form-group input-group '>
+            <div className=' form-group input-group mb-2 '>
                 <div className='input-group-prepend'>
                     <span className='input-group-text'>
-                        <i className='fa fa-lock'></i>
+                        <i className='fa-solid fa-lock mt-2'></i>
                     </span>
                 </div>
                 <input
@@ -123,13 +126,13 @@ const handleSubmit = (evt) =>{
             </div>
              {/* signin button */}
              <div className='form-group'>
-                <button type='submit' className='btn btn-primary btn-block'>
+                <button type='submit' className='btn btn-primary btn-block mb-4'>
                     Нэвтрэх
                 </button>
 
             </div>
-            <p className='text-center tex-white'>
-               Don`t  Have an account ?  <Link to='/signup'> Бүртгүүлэх</Link>
+            <p className='text-center'>
+               <h5 className="border rounded-3 border-success border-3 text-danger">Don`t  Have an account ?</h5>  <Link to='/signup'><h5 className="btn rounded-pill btn-danger">  Бүртгүүлэх</h5></Link>
             </p>
 
   </form>
