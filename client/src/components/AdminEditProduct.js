@@ -7,11 +7,10 @@ import { getProduct } from '../redux/actions/productActions';
 import { getCategories } from '../redux/actions/categoryActions';
 import { useParams } from 'react-router-dom';
 
-const AdminEditProduct = ( {match} ) => {
-	const prouctId = useParams()
+const AdminEditProduct = ( props ) => {
 	
 	 let navigate = useNavigate();
-	const  { productId } = match.params.productId;
+	const  { productId } = useParams( props);
 
 	
 	const dispatch = useDispatch();
@@ -84,7 +83,7 @@ const AdminEditProduct = ( {match} ) => {
 				<div className='row'>
 					<div className='col-md-8 mx-auto'>
 						<Link to='/admin/dashboard'>
-							<span className='fas fa-arrow-left'>Go Back</span>
+							<span className='fas fa-arrow-left'>Буцах</span>
 						</Link>
 						<div>
 							<br />
@@ -92,7 +91,7 @@ const AdminEditProduct = ( {match} ) => {
 								<form onSubmit={handleProductSubmit}>
 									<div className='modal-header bg-warning text-white'>
 										<h5 className='modal-title'>
-											Update Food
+											Шинэчлэх
 										</h5>
 									</div>
 									<div className='modal-body my-2'>
@@ -126,7 +125,7 @@ const AdminEditProduct = ( {match} ) => {
 
 											<div className='form-group'>
 												<label className='text-secondary'>
-													Name
+													Нэр
 												</label>
 												<input
 													type='text'
@@ -142,7 +141,7 @@ const AdminEditProduct = ( {match} ) => {
 											</div>
 											<div className='form-group'>
 												<label className='text-secondary'>
-													Description
+													Тайлбар
 												</label>
 												<textarea
 													className='form-control'
@@ -158,7 +157,7 @@ const AdminEditProduct = ( {match} ) => {
 											</div>
 											<div className='form-group'>
 												<label className='text-secondary'>
-													Price
+													Үнэ
 												</label>
 												<input
 													type='text'
@@ -174,11 +173,11 @@ const AdminEditProduct = ( {match} ) => {
 											</div>
 											<div className='form-row'>
 												<div className='form-group col-md-6'>
-													<label className='text-secondary'>
+													<label className='text-secondary '>
 														Category
 													</label>
 													<select
-														className='custom-select mr-sm-2'
+														className='custom-select mx-2 mt-2 mb-2'
 														name='productCategory'
 														value={productCategory}
 														onChange={e =>
@@ -212,7 +211,7 @@ const AdminEditProduct = ( {match} ) => {
 
 												<div className='form-group col-md-6'>
 													<label className='text-secondary'>
-														Quantity
+														Тоо
 													</label>
 													<input
 														type='number'

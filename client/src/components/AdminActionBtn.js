@@ -14,11 +14,11 @@ const showActionBtn = () => (
                         <i className="fas fa-plus"> Add Food</i>
                     </button>
                 </div>
-                <div className="col-md-4  my-1">
+                {/* <div className="col-md-4  my-1">
                     <button className="btn btn-outline-success btn-block">
                         <i className="fas fa-money-bill"> View Orders</i>
                     </button>
-                </div>
+                </div> */}
             </div>
         </div>
     </div>

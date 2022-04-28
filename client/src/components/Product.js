@@ -3,10 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getProduct } from '../redux/actions/productActions';
 import { addToCart } from '../redux/actions/cartActions';
 import { useNavigate } from 'react-router-dom';
+import {useParams } from 'react-router-dom'
 
-const Product = ({ match }) => {
+const Product = ( props) => {
     const navigate = useNavigate();
-	const { productId } = match.params;
+	const { productId } = useParams(props);
 	console.log(productId, '---------df-d--');
 	const dispatch = useDispatch();
 
@@ -31,7 +32,7 @@ const Product = ({ match }) => {
 				className='btn btn-light text-primary mb-4'
 				onClick={handleGoBackBtn}
 			>
-				Go Back
+				Буцах
 			</button>
 			{product && (
 				<div className='row'>
@@ -45,27 +46,27 @@ const Product = ({ match }) => {
 					<div className='col-md-5'>
 						<h3 className='mb-4'>{product.productName}</h3>
 						<p className='text-muted border-top py-2'>
-							Price:{' '}
+							Үнэ:{' '}
 							{product.productPrice.toLocaleString('en-US', {
 								style: 'currency',
-								currency: 'USD',
+								currency: 'MNT',
 							})}
 						</p>
 						<p className='text-muted border-top py-2'>
-							Status:{' '}
+							Төлөв:{' '}
 							{product.productQty <= 0
 								? 'Дууссан'
 								: 'Нөөцөд байгаа'}
 						</p>
 						<p className='text-muted border-top py-2'>
-							Description: {product.productDesc}
+							Тайлбар: {product.productDesc}
 						</p>
 						<button
 							className='btn btn-dark btn-large btn-block mb-5 py-2'
 							disabled={product.productQty <= 0}
 							onClick={handleAddToCart}
 						>
-							Add to Cart
+							Сагсанд нэмэх
 						</button>
 					</div>
 				</div>

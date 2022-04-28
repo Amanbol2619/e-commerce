@@ -1,14 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux';
 
  const UserDashboard = () =>{
+
+  const { cart } = useSelector(state => state.cart);
     
       return(
         <div class="row">
         <div class="col-md-8 mb-4">
           <div class="card mb-4">
             <div class="card-header py-3">
-              <h5 class="mb-0">Хүргүүлэх хаягийн дэлгэрэнгүй мэдээлэл</h5>
+              <h5 class="mb-0">Дэлгэрэнгүй мэдээлэл</h5>
             </div>
             <div class="card-body">
               <form>
@@ -39,8 +42,8 @@ import { Link } from "react-router-dom";
       
                 {/* <!-- Number input --> */}
                 <div class="form-outline mb-4">
-                  <input type="number" id="form7Example6" class="form-control" />
-                  <label class="form-label" for="form7Example6">Утас</label>
+                  <input type="email" id="form7Example5" class="form-control" />
+                  <label class="form-label" for="form7Example5">Утас</label>
                 </div>
       
                 {/* <!-- Message input --> */}
@@ -63,13 +66,38 @@ import { Link } from "react-router-dom";
             <div class="card-body">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                  Products
-                  <span>$53.98</span>
+                  Захиалсан хоол
+                  { cart.map(product => (
+                   
+                    <tr key={product._id}>
+                      <th scope="row">
+                        {' '}
+                        <img
+													style={{
+														maxWidth: '110px',
+													}}
+													className='img-fluid w-100 img-thumbnail'
+													src={`/uploads/${product.fileName}`}
+													alt='product'
+												/>
+                      </th>
+                      {' '}
+                      {product.productName}
+                      <td>
+                      {' '}
+												{product.productPrice.toLocaleString(
+													'en-US',
+													{
+														style: 'currency',
+														currency: 'MNT',
+													}
+                        )}
+                      </td>
+                    </tr>
+                  )
+                    )}
                 </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center px-0">
-                  Хүргэлт
-                  <span>Gratis</span>
-                </li>
+               
                 <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
                   <div>
                     <strong>Нийт дүн</strong>
@@ -77,7 +105,23 @@ import { Link } from "react-router-dom";
                       <p class="mb-0">НӨАТ багтаасан</p>
                     </strong>
                   </div>
-                  <span><strong>$53.98</strong></span>
+                  <p className='font-weight-light text-muted border-bottom'>
+								{cart.length === 1
+									? '(1) Төрөл'
+									: `(${cart.length}) Төрөл`}
+							</p>
+                  <span><strong>
+                  Нийт: ₮
+								{cart
+									.reduce(
+										(currentSum, currentCartItem) =>
+											currentSum +
+											currentCartItem.count *
+												currentCartItem.productPrice,
+										0
+									)
+									.toFixed(2)}
+                    </strong></span>
                 </li>
               </ul>
       

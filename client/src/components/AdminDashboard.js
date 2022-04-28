@@ -4,6 +4,7 @@ import AdminActionBtn from "../components/AdminActionBtn";
 import AdminCategoryModal from "./AdminCategoryModel";
 import AdminProductModal from "./AdminProductModel";
 import AdminBody from "./AdminBody";
+import AdminOrderModel from "./AdminOrderModel";
 
 import { useDispatch} from 'react-redux'
 import { getCategories} from  '../redux/actions/categoryActions'
@@ -28,6 +29,7 @@ const AdminDashboard = () => {
             <AdminActionBtn/>
             <AdminCategoryModal />
             <AdminProductModal />
+            <AdminOrderModel />
             <AdminBody />
         </section>
 

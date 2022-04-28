@@ -161,7 +161,7 @@ const Signup = () => {
 
             </div>
             <p className='text-center tex-white'>
-               <h3 className="border rounded-3 border-success border-3 text-primary"> Бүртгүүлтэй юу ?</h3>  <Link to='/signin'><h5 className="btn rounded-pill btn-danger">Нэвтрэх</h5> </Link>
+               <h3 className="border rounded-3 border-success border-3 text-primary"> Бүртгэлтэй юу?</h3>  <Link to='/signin'><h5 className="btn rounded-pill btn-danger">Нэвтрэх</h5> </Link>
             </p>
 
         </form>

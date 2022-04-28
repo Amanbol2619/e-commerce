@@ -8,7 +8,7 @@ const authRoutes = require('./routes/auth');
 const categoryRoutes = require('./routes/category');
 const productRoutes = require('./routes/product');
 const filterRoutes = require('./routes/filter');
-
+// const orderRoutes = require('./routes/order');
 
 app.use(cors());
 app.use(morgan('dev'));
@@ -19,6 +19,7 @@ app.use('/api/category', categoryRoutes);
 app.use('/api/product', productRoutes);
 app.use('/uploads',express.static('uploads'));
 app.use('/api/filter/', filterRoutes);
+// app.use('/api/order/', orderRoutes);
 
 
 connectDb();

@@ -17,15 +17,18 @@
 .home-page{
     height: 100vh;
 }
-/* .banner-image{
-    background-image: url('/public/images/banner.jpg');
+.shop-page{
+    height: 100vh;
+}
+ .banner-image{
+    background-image: url('/public/images/junk.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     opacity: 1;
-    height: 60%;
+    height: 80%;
 
-} */
+} 
 .carousel{
     background-image: url('/public/images/ban.jpg');
     background-size: cover;

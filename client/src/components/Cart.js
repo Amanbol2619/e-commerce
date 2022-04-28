@@ -39,7 +39,7 @@ const Cart = () => {
 			{cart.length <= 0 ? (
 				<div className='mt-4 p-5 bg-primary text-white rounded'>
 					<h1 className='display-4'>
-						 Таны карт хоосон байна{' '}
+						 Таны сагс хоосон байна{' '}
 						<button
 							className='btn btn-light text-primary ml-4'
 							
@@ -59,10 +59,10 @@ const Cart = () => {
 								<thead>
 									<tr>
 										<th scope='col'></th>
-										<th scope='col'>Product</th>
-										<th scope='col'>Price</th>
-										<th scope='col'>Quantity</th>
-										<th scope='col'>Remove</th>
+										<th scope='col'>Хоол</th>
+										<th scope='col'>Үнэ</th>
+										<th scope='col'>Тоо/ширхэг</th>
+										<th scope='col'>Устгах</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -133,14 +133,14 @@ const Cart = () => {
 							</table>
 						</div>
 						<div className='col-md-4 border-left pl-4'>
-							<h2>Cart Summary</h2>
+							<h2>Сагс</h2>
 							<p className='font-weight-light text-muted border-bottom'>
 								{cart.length === 1
 									? '(1) Төрөл'
 									: `(${cart.length}) Төрөл`}
 							</p>
 							<p className='font-weight-bold'>
-								Нийт: $
+								Нийт: ₮
 								{cart
 									.reduce(
 										(currentSum, currentCartItem) =>
@@ -152,7 +152,7 @@ const Cart = () => {
 									.toFixed(2)}
 							</p>
 							<button className='btn btn-dark btn-large btn-block mb-5 py-2'>
-							  <Link to='/signin'>Төлөх </Link>
+							  <Link to='/signin'>Захиалах </Link>
 							</button>
 						</div>
 					</div>

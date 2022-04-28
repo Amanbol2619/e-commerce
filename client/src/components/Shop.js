@@ -60,33 +60,32 @@
  	};
 
  	return (
- 		<section className='shop-page m-4'>
- 			<div className='mt-4 p-5 bg-primary text-white rounded'>
- 				<h1 className='display-4'>Shop</h1>
- 			</div>
+ 		<section className='shop-page'>
+		    <div className='banner-image'></div>
+ 			
  			<div className='row'>
  				<div className='col-md-3 border-right'>
-					<div className='text-muted mb-2'>
+					<div className='text-muted mt-1 mx-4'>
  						Filters <span className='fas fa-sliders-h'></span>
  					</div>
 
 					<nav className='navbar navbar-expand-lg navbar-light bg-light border-top p-3'>
  						<form className='form-inline my-2 my-lg-0'>
  							<input
-								className='form-control mr-sm-2'
+								className='form-control mr-sm-2 mb-2'
  								type='search'
- 								placeholder='Search'
+ 								placeholder='Хайх'
  								aria-label='Search'
  								name='search'
 								value={text}
  								onChange={handleSearch}
  							/>
  							<button
- 								className='btn btn-outline-success my-2 my-sm-0'
+ 								className='btn btn-outline-success my-2 my-sm-0 '
 								type='submit'
 								disabled={true}
  							>
-								Search
+								Хайлт
  							</button>
  						</form>
  					</nav>
@@ -113,7 +112,7 @@
 							))}
 					</div>
  				</div>
- 				<div className='col-md-9'>
+ 				<div className='col-md-9 mt-2'>
  					<div className='row'>
 						{products &&
 							products.map(p => (

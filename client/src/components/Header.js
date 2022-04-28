@@ -20,7 +20,7 @@ const Header = () => {
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
                 <Link to='/' className="navbar-brand">
-                   <i className="fab fa-cuttlefish"></i> Logo</Link>
+                   <i className="fab fa-cuttlefish"></i> Amo </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -86,7 +86,7 @@ const Header = () => {
                                 <li className="nav-item">
                                     <button
                                     
-                                    className="btn btn-link"
+                                    className="btn btn-success"
                                     onClick={handleLogout}
                                       
                                     

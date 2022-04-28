@@ -30,7 +30,7 @@ const Card = ({ product, adminPage = false, homePage = false }) => {
 						<span className='text-secondary mr-2'>
 							{product.productPrice.toLocaleString('en-US', {
 								style: 'currency',
-								currency: 'USD',
+								currency: 'MNT',
 							})}
 						</span>
 					</h6>
@@ -70,9 +70,9 @@ const Card = ({ product, adminPage = false, homePage = false }) => {
 							<Link
 								to={`/product/${product._id}`}
 								type='button'
-								className='btn btn-primary btn-sm mr-1 my-1'
+								className='btn btn-primary btn-sm mr-1 my-1 mx-2'
 							>
-								View Product
+								Үзэх
 							</Link>
 							<button
 								type='button'
@@ -80,7 +80,7 @@ const Card = ({ product, adminPage = false, homePage = false }) => {
 								disabled={product.productQty <= 0}
 								onClick={handleAddToCart}
 							>
-								Add to Cart
+								Сагсанд нэмэх
 							</button>
 						</>
 					)}
