@@ -24,13 +24,13 @@ exports.create = async (req, res) => {
 
         await product.save();
         res.json({
-            successMessage: `${productName} was created`,
+            successMessage: `${productName} үүслээ`,
             product
         })
     } catch (err) {
-        console.log(err, 'productController.create error');
+        console.log(err, 'productController.create алдаа');
         res.status(500).json({
-            errorMessage: 'Please try again'
+            errorMessage: 'Дахин оролдоно уу'
         })
     }
 };
@@ -45,9 +45,9 @@ exports.readAll = async (req, res) => {
         
         res.json({products});
     } catch (err) {
-        console.log(err, 'productController.readAll error');
+        console.log(err, 'productController.readAll алдаа');
         res.status(500).json({
-            errorMessage: 'Please try again'
+            errorMessage: 'Дахин оролдоно уу'
         })
     }
 };
@@ -60,9 +60,9 @@ exports.readAll = async (req, res) => {
 
  		res.json({ products });
  	} catch (err) {
- 		console.log(err, 'productController.readAll error');
+ 		console.log(err, 'productController.readAll алдаа');
  		res.status(500).json({
- 			errorMessage: 'Please try again later',
+ 			errorMessage: 'Дахин оролдоно уу',
  		});
 	}
  };
@@ -77,9 +77,9 @@ exports.read = async (req, res) => {
         
         res.json(product);
     } catch (err) {
-        console.log(err, 'productController.read error');
+        console.log(err, 'productController.read алдаа');
         res.status(500).json({
-            errorMessage: 'Please try again'
+            errorMessage: 'Дахин оролдоно уу'
         })
     }
 };
@@ -100,12 +100,12 @@ exports.update = async (req, res) => {
  	if (req.file !== undefined && req.file.filename !== oldProduct.fileName) {
 	fs.unlink(`uploads/${oldProduct.fileName}`, err => {
 		if (err) throw err;
- 			console.log('Image deleted from the filesystem');
+ 			console.log('Зураг устгагдлаа');
 	});
  }
 
 res.json({
-	successMessage: 'Product successfully updated',
+	successMessage: 'Амжилттай өөрчлөгдлөө',
 	});
  };
 
@@ -116,15 +116,15 @@ exports.delete = async (req, res) => {
        const productId = req.params.productId;
        const deletedProduct = await Product.findByIdAndDelete(productId);
        fs.unlink(`uploads/${deletedProduct.fileName}`, (err) => {
-           console.log('Image Sucessfully deleted from filesystem', deletedProduct.fileName);
+           console.log('Амжиллтай устгагдлаа', deletedProduct.fileName);
        });
 
        res.json(deletedProduct);
 
     } catch (err) {
-        console.log(err, 'productController.delete error');
+        console.log(err, 'productController.delete алдаа');
         res.status(500).json({
-            errorMessage: 'Please try again'
+            errorMessage: 'Дахин оролдоно уу'
         })
     }
 };

@@ -7,7 +7,7 @@ const showHeader = () => (
             <div className="row">
                 <div className="col-md-6">
                     <h1>
-                        <i className="fas fa-home"> Dashboard</i>
+                        <i className="fas fa-home"> Админ хуудас</i>
                     </h1>
                 </div>
             </div>

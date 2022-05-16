@@ -31,28 +31,28 @@ const Header = () => {
 
                                 <li className="nav-item">
                                     <Link to='/' className="nav-link">
-                                       <i className="fas fa-home"> </i> Home
+                                       <i className="fas fa-home"> </i> Нүүр хуудас
                                     </Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link to='/shop' className="nav-link">
-                                       <i className="fas fa-shopping-bag"> </i> Shop
+                                    <i class="fa-solid fa-burger"></i> Хоол
                                     </Link>
                                 </li>
                                 <li className="nav-item mx-2 ">
                                     <Link to='/cart' className="nav-link" style={{ position: 'relative'}}>
-                                       <i className="fas fa-shopping-cart"> </i> Cart
+                                       <i className="fas fa-shopping-cart"> </i> Захиалга
                                        <span className=" mt-1 mx-1 translate-middle badge rounded-pill bg-danger" style={{ position: 'absolute', top: '0px'}}> {cart.length} </span>
                                     </Link>
                                 </li>
-                                <li className="nav-item">
+                                <li className="nav-item ">
                                     <Link to='/signup' className="nav-link">
-                                       <i className="fas fa-edit"></i> Signup
+                                       <i className="fas fa-edit"></i> Бүртгүүлэх
                                     </Link>
                                 </li>
                                 <li className="nav-item">
                                     <Link to='/signin' className="nav-link">
-                                      <i className="fas fa-user-edit"></i> Signin
+                                      <i className="fas fa-user-edit"></i> Нэвтрэх
                                     </Link>
                                 </li>
                             </Fragment>
@@ -62,7 +62,7 @@ const Header = () => {
 
                                 <li className="nav-item">
                                     <Link to='/user/dashboard' className="nav-link">
-                                        Dashboard
+                                        Дашбоард
                                     </Link>
                                 </li>
 
@@ -73,7 +73,7 @@ const Header = () => {
 
                                 <li className="nav-item">
                                     <Link to='/admin/dashboard' className="nav-link">
-                                        Dashboard
+                                        Самбар
                                     </Link>
                                 </li>
 
@@ -91,7 +91,7 @@ const Header = () => {
                                       
                                     
                                     >
-                                        Logout
+                                        Гарах
                                     </button>
                                 </li>
 

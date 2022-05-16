@@ -25,9 +25,7 @@ const AdminEditProduct = ( props ) => {
 	const [productCategory, setProductCategory] = useState('');
 	const [productQty, setProductQty] = useState('');
 
-	/****************************
-	 * LIFECYCLE METHODS
-	 ***************************/
+	
 	useEffect(() => {
 		if (!product) {
 			dispatch(getProduct(productId));
@@ -97,7 +95,7 @@ const AdminEditProduct = ( props ) => {
 									<div className='modal-body my-2'>
 										<Fragment>
 											<label className='btn btn-dark mr-4'>
-												Choose file
+												Файл сонгох
 												<input
 													type='file'
 													name='productImage'
@@ -174,7 +172,7 @@ const AdminEditProduct = ( props ) => {
 											<div className='form-row'>
 												<div className='form-group col-md-6'>
 													<label className='text-secondary '>
-														Category
+														Категори
 													</label>
 													<select
 														className='custom-select mx-2 mt-2 mb-2'
@@ -187,7 +185,7 @@ const AdminEditProduct = ( props ) => {
 														}
 													>
 														<option value=''>
-															Choose one...
+															 сонгох...
 														</option>
 														{categories &&
 															categories.map(
@@ -235,7 +233,7 @@ const AdminEditProduct = ( props ) => {
 											type='submit'
 											className='btn btn-warning text-white'
 										>
-											Submit
+											дарах
 										</button>
 									</div>
 								</form>

@@ -9,7 +9,7 @@ const AdminBody = () => {
     return (
         <div className="container">
             <div className="row">
-                <div className="card-deck">
+                <div className="card-deck mx-7">
                     { products && products.map(product => (
                         <Card  key={product._id} product={product} adminPage = {true} />
                     ))}

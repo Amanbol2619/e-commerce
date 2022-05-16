@@ -37,9 +37,9 @@ const Cart = () => {
 	return (
 		<section className='cart-page m-4'>
 			{cart.length <= 0 ? (
-				<div className='mt-4 p-5 bg-primary text-white rounded'>
+				<div className='mt-4 p-5 '>
 					<h1 className='display-4'>
-						 Таны сагс хоосон байна{' '}
+						 Таны захиалга хоосон байна{' '}
 						<button
 							className='btn btn-light text-primary ml-4'
 							
@@ -50,8 +50,8 @@ const Cart = () => {
 				</div>
 			) : (
 				<>
-					<div className='mt-4 p-5 bg-primary text-white rounded'>
-						<h1 className='display-4'>Cart</h1>
+					<div className='mt-4 p-5 '>
+						<h1 className='display-4'>Захиалгын хэсэг</h1>
 					</div>
 					<div className='row'>
 						<div className='col-md-8'>
@@ -133,7 +133,7 @@ const Cart = () => {
 							</table>
 						</div>
 						<div className='col-md-4 border-left pl-4'>
-							<h2>Сагс</h2>
+							<h2>Захиалга</h2>
 							<p className='font-weight-light text-muted border-bottom'>
 								{cart.length === 1
 									? '(1) Төрөл'

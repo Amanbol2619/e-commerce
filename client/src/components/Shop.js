@@ -66,7 +66,7 @@
  			<div className='row'>
  				<div className='col-md-3 border-right'>
 					<div className='text-muted mt-1 mx-4'>
- 						Filters <span className='fas fa-sliders-h'></span>
+ 						Шүүлтүүр <span className='fas fa-sliders-h'></span>
  					</div>
 
 					<nav className='navbar navbar-expand-lg navbar-light bg-light border-top p-3'>

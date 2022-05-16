@@ -100,7 +100,7 @@ const Signup = () => {
                     name='username'
                     value={username}
                     className='form-control'
-                    placeholder='Username'
+                    placeholder='Нэвтрэх нэр'
                     type='text'
                     onChange={handleChange}
                 />
@@ -116,7 +116,7 @@ const Signup = () => {
                     name='email'
                     value={email}
                     className='form-control'
-                    placeholder='Email address'
+                    placeholder='имэйл'
                     type='email'
                     onChange={handleChange}
                 />
@@ -132,7 +132,7 @@ const Signup = () => {
                     name='password'
                     value={password}
                     className='form-control'
-                    placeholder=' Create password'
+                    placeholder=' Нууц үг'
                     type='password'
                     onChange={handleChange}
                 />
@@ -148,20 +148,20 @@ const Signup = () => {
                     name='password2'
                     value={password2}
                     className='form-control'
-                    placeholder='Confirm password'
+                    placeholder='Нууц үгээ давтах'
                     type='password'
                     onChange={handleChange}
                 />
             </div>
             {/* signup button */}
-            <div className='form-group'>
+            <div className=' text-center'>
                 <button type='submit' className='btn btn-primary btn-block'>
                     Бүртгүүлэх
                 </button>
 
             </div>
-            <p className='text-center tex-white'>
-               <h3 className="border rounded-3 border-success border-3 text-primary"> Бүртгэлтэй юу?</h3>  <Link to='/signin'><h5 className="btn rounded-pill btn-danger">Нэвтрэх</h5> </Link>
+            <p className='text-center tex-white mt-5'>
+               <h3 className="text-primary"> Бүртгэлтэй юу?</h3>  <Link to='/signin'><h5 className="btn rounded-pill btn-danger">Нэвтрэх</h5> </Link>
             </p>
 
         </form>

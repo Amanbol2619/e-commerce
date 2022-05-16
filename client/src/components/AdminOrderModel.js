@@ -7,13 +7,12 @@ const AdminOrderModel = () => {
     const { cart } = useSelector(state => state.cart);
     return (
         <Fragment>
-            <div className='bg-light my-2'>
-                <div className='container'>
+            <div className=''>
                 <div className="row pb-3">
                 <div className="col-md-4  my-1">
                 
            
-            <button type="button" className="btn btn-outline-success btn-block" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">
+            <button type="button" className="btn btn-outline-info btn-block mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">
             <i className="fas fa-money-bill"> Захиалга</i>
                 </button>
 
@@ -110,7 +109,6 @@ const AdminOrderModel = () => {
 </div>  
 
     </div>
-</div>
 </div>
 </div> 
 

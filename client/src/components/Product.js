@@ -66,7 +66,7 @@ const Product = ( props) => {
 							disabled={product.productQty <= 0}
 							onClick={handleAddToCart}
 						>
-							Сагсанд нэмэх
+							Захиалах
 						</button>
 					</div>
 				</div>

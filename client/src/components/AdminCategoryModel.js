@@ -56,7 +56,7 @@ import { createCategory } from "../redux/actions/categoryActions";
             <div className="modal-content">
                 <form onSubmit={handleCategorySubmit}>
                     <div className="modal-header bg-info text-white">
-                        <h5 className="modal-title">Add Category </h5>
+                        <h5 className="modal-title">Категори нэмэх </h5>
                         <button className="close" data-bs-dismiss="modal">
                             <span><i className="fas fa-times"></i></span>
 
@@ -71,7 +71,7 @@ import { createCategory } from "../redux/actions/categoryActions";
                               <div className="text-center">{showLoadingMsg()}</div>
                             ) : (
                                  <Fragment>
-                                <label className="text-secondary">Category</label>
+                                <label className="text-secondary">Категори</label>
                                 <input type="text"
                                     className="form-control"
                                     name="category"

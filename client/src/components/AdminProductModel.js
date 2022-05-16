@@ -90,7 +90,7 @@ import { clearMessages } from "../redux/actions/messageActions";
             <div className="modal-content">
                 <form onSubmit={handleProductSubmit}>
                     <div className="modal-header bg-warning text-white">
-                        <h5 className="modal-title">Add Food </h5>
+                        <h5 className="modal-title">Хоол нэмэх </h5>
                         <button className="close" data-bs-dismiss="modal">
                             <span><i className="fas fa-times"></i></span>
 
@@ -149,7 +149,7 @@ import { clearMessages } from "../redux/actions/messageActions";
                                 </div>
                                 <div  className="form-row">
                                  <div className="form-group col-md-6">
-                                     <label className="text-secondary">Category</label>
+                                     <label className="text-secondary">Категори</label>
                                      <select className="form-select mr-sm-1" 
                                      name="productCategory"
                                      onChange={handleProductChange}

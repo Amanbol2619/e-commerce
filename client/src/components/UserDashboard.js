@@ -37,7 +37,7 @@ import { useSelector, useDispatch } from 'react-redux';
                 {/* <!-- Email input --> */}
                 <div class="form-outline mb-4">
                   <input type="email" id="form7Example5" class="form-control" />
-                  <label class="form-label" for="form7Example5">Email</label>
+                  <label class="form-label" for="form7Example5">имэйл</label>
                 </div>
       
                 {/* <!-- Number input --> */}
@@ -61,7 +61,7 @@ import { useSelector, useDispatch } from 'react-redux';
         <div class="col-md-4 mb-4">
           <div class="card mb-4">
             <div class="card-header py-3">
-              <h5 class="mb-0">Summary</h5>
+              <h5 class="mb-0">Захиалга</h5>
             </div>
             <div class="card-body">
               <ul class="list-group list-group-flush">

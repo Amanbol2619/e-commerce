@@ -47,10 +47,10 @@ const Card = ({ product, adminPage = false, homePage = false }) => {
 							<Link
 								to={`/admin/edit/product/${product._id}`}
 								type='button'
-								className='btn btn-secondary btn-sm mr-1 my-1'
+								className='btn btn-secondary btn-sm mr-1 mx-1'
 							>
 								<i className='far fa-edit pr-1'></i>
-								Edit
+								Засах
 							</Link>
 							<button
 								type='button'
@@ -60,7 +60,7 @@ const Card = ({ product, adminPage = false, homePage = false }) => {
 								}
 							>
 								<i className='far fa-trash-alt pr-1'></i>
-								Delete
+								Устгах
 							</button>
 						</>
 					)}
@@ -80,7 +80,7 @@ const Card = ({ product, adminPage = false, homePage = false }) => {
 								disabled={product.productQty <= 0}
 								onClick={handleAddToCart}
 							>
-								Сагсанд нэмэх
+								Захиалгад нэмэх
 							</button>
 						</>
 					)}

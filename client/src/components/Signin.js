@@ -103,7 +103,7 @@ const handleSubmit = (evt) =>{
                     name='email'
                     value={email}
                     className='form-control'
-                    placeholder='Email address'
+                    placeholder='имэйл'
                     type='email'
                     onChange={handleChange}
                 />
@@ -125,14 +125,14 @@ const handleSubmit = (evt) =>{
                 />
             </div>
              {/* signin button */}
-             <div className='form-group'>
+             <div className='form-group text-center'>
                 <button type='submit' className='btn btn-primary btn-block mb-4'>
                     Нэвтрэх
                 </button>
 
             </div>
-            <p className='text-center'>
-               <h5 className="border rounded-3 border-success border-3 text-danger">Don`t  Have an account ?</h5>  <Link to='/signup'><h5 className="btn rounded-pill btn-danger">  Бүртгүүлэх</h5></Link>
+            <p className='text-center mt-4'>
+               <h5 className=" text-primary">Бүртгүүлээгүй бол</h5>  <Link to='/signup'><h5 className="btn rounded-pill btn-danger">  Бүртгүүлэх</h5></Link>
             </p>
 
   </form>
